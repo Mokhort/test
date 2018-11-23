@@ -1,3 +1,1 @@
-﻿  lab1.cpp
-c:\1642\mokhort\test\lab1\lab1\lab1.cpp(115): warning C4715: CommonPrice::operator<<: значение возвращается не при всех путях выполнения
-  lab1.vcxproj -> C:\1642\mokhort\test\lab1\Debug\lab1.exe
+﻿  lab1.vcxproj -> C:\1642\mokhort\test\lab1\Debug\lab1.exe
