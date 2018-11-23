@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\1642\mokhort\test\lab2\lab2\source.cpp(26): warning C4018: <: несоответствие типов со знаком и без знака
+c:\1642\mokhort\test\lab2\lab2\source.cpp(37): warning C4018: <: несоответствие типов со знаком и без знака
+c:\1642\mokhort\test\lab2\lab2\source.cpp(14): warning C4101: counter: неиспользованная локальная переменная
+  lab2.vcxproj -> C:\1642\mokhort\test\lab2\Debug\lab2.exe
