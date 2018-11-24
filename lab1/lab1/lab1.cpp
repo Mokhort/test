@@ -17,12 +17,13 @@ int main() {
 	cout << "Write the name of store, product and cost :" << endl;
 	for (int i = 0; i < 3; i++) {
 
-		cin >> wstore >> wproduct >> wcost;
+		cin >> q;
+		/*cin >> wstore >> wproduct >> wcost;
 		q.setStore(wstore);
 		q.setProduct(wproduct);
-		q.setCost(wcost);
-		//p >> q;
-		p.push(q);
+		q.setCost(wcost);*/
+		p += q;
+		//p.push(q);
 
 	}
 	p.sort();
@@ -50,8 +51,8 @@ int main() {
 			q.setStore(wstore);
 			q.setProduct(wproduct);
 			q.setCost(wcost);
-			//p+= q;
-			p.push(q);
+			p+= q;
+			//p.push(q);
 
 
 			p.sort();	//+сортировка по алфавиту

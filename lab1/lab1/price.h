@@ -13,37 +13,20 @@ private:
 	int cost;
 	int number;
 public:
-	void setProduct(string p) {
-		product = p;
-	}
+	void setProduct(string p);
+	string getProduct();
 
-	string getProduct() {
-		return product;
-	}
+	void setStore(string p);
+	string getStore();
 
-	void setStore(string p) {
-		store = p;
-	}
+	Price();
 
-	string getStore() {
-		return store;
-	}
+	void setCost(int p);
+	int getCost();
 
-	Price() {
-		cost = 0;
-	}
-	void setCost(int p) {
-		cost = p;
-	}
+	void setNumber(int p);
+	int getNumber();
 
-	int getCost() {
-		return cost;
-	}
-	void setNumber(int p) {
-		number = p;
-	}
-	int getNumber() {
-		return number;
-	}
+	friend istream& operator >> (istream &is, Price &q);
 };
 #endif

@@ -1,6 +1,7 @@
 #pragma once
 #ifndef COMMON
 #define COMMON
+#include "PRICE.h"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -10,127 +11,36 @@ class CommonPrice {
 public:
 	int tsize, n, counter = 1;
 	Price *mas;
-	CommonPrice()
+	CommonPrice();
+
+	~CommonPrice();
+
+	CommonPrice(const CommonPrice &obj);
+
+
+	friend CommonPrice operator += (CommonPrice &obj, const Price &p)
 	{
-		cout << "\n //Constructor//\n";
-		n = 3;
-		tsize = 0;
-		mas = new Price[n];
+		Price *tmp = new Price[obj.tsize + 1];
+
+		for (int i = 0; i< obj.tsize; i++)
+			tmp[i] = obj.mas[i];
+
+		tmp[obj.tsize] = p;
+		tmp[obj.tsize].setNumber(obj.counter);
+		delete[] obj.mas;
+		obj.mas = tmp;
+		obj.tsize++;
+		obj.counter++;
+		return obj;
 	}
 
-	~CommonPrice() {
-		cout << "\n //Destructor//\n";
-		delete[]mas;
-	}
+	CommonPrice & operator -=(int wnumber);//void pop(int wnumber) <<
+	
 
-	CommonPrice(const CommonPrice &obj)
-	{
-		mas = new Price;
-		for (int i = 0; i<tsize; i++)
-			mas[i] = obj.mas[i];
-
-		tsize = obj.tsize;
-		cout << "\n//Copy constructor//\n";
-	}
+	friend ostream & operator << (ostream & os, const CommonPrice & com);
 
 
-
-
-	//CommonPrice & operator >> (CommonPrice& is ,Price & p)
-	//CommonPrice &operator >>(CommonPrice q,Price p)
-	//friend istream &operator >> (istream &stream, Price & p)
-	//CommonPrice& operator += (Price &p)
-	void push(Price p)
-	{
-		Price *tmp = new Price[tsize + 1];
-
-		for (int i = 0; i<tsize; i++)
-			tmp[i] = mas[i];
-
-		tmp[tsize] = p;
-		tmp[tsize].setNumber(counter);
-		delete[] mas;
-		mas = tmp;
-		tsize++;
-		counter++;
-		//return p;
-	}
-
-	CommonPrice & operator -=(int wnumber)//void pop(int wnumber) <<
-	{
-		int k = 0;
-
-		if (wnumber <= 0) {
-			throw 123;
-		}
-
-		Price *tmp = new Price[tsize - 1];
-		for (int i = 0; i < tsize; i++) {
-			if (wnumber != mas[i].getNumber()) {
-				tmp[k] = mas[i];
-				k++;
-			}
-		}
-		delete[] mas;
-		mas = tmp;
-		tsize--;
-
-	}
-
-	friend ostream & operator << (ostream & os, const CommonPrice & com)
-	{
-		if (com.tsize == 0) {
-			cout << "spisok is empty" << endl;
-		}
-		else {
-			for (int i = 0; i <com.tsize; i++)
-				cout << com.mas[i].getNumber() << " " << com.mas[i].getStore() << " " << com.mas[i].getProduct() << " " << com.mas[i].getCost() << endl;
-		}
-		return os;
-	}
-
-
-
-
-
-	//void show() {
-	//	if (tsize == 0) {
-	//		cout << "spisok is empty" << endl;
-	//	}
-	//	else {
-	//		for (int i = 0; i < tsize; i++)
-	//			cout << mas[i].getNumber() << " " << mas[i].getStore() << " " << mas[i].getProduct() << " " << mas[i].getCost() << endl;
-	//	}
-	//}
-	void sort() {//сортировка пузырьком по алфавиту
-		int counter = 1;
-		for (int i = 0; i < tsize; i++)
-			for (int j = tsize - 1; j > i; j--) {
-				if (mas[j - 1].getStore() > mas[j].getStore()) {
-					Price tmp = mas[j - 1];
-					mas[j - 1] = mas[j];
-					mas[j] = tmp;
-				}
-			}
-		for (int i = 0; i < tsize; i++)
-		{
-			mas[i].setNumber(counter);
-			counter++;
-		}
-	}
-
-	void prodofstore(string storefp) {
-		int count = 0;
-		for (int i = 0; i < tsize; i++)
-			if (mas[i].getStore() == storefp)
-			{
-				cout << mas[i].getProduct() << " " << mas[i].getCost() << endl;
-				count++;
-			}
-		if (count == 0)
-		{
-			cout << "wrong store" << endl;
-		}
-	}
+	void sort();
+	void prodofstore(string storefp);
 };
 #endif

@@ -111,7 +111,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="common.cpp" />
     <ClCompile Include="lab1.cpp" />
+    <ClCompile Include="price.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
