@@ -1,3 +1,3 @@
 ﻿  Source.cpp
-c:\1642\mokhort\test\lab2\lab2\source.cpp(81): warning C4101: counter: неиспользованная локальная переменная
+c:\1642\mokhort\test\lab2\lab2\source.cpp(15): warning C4101: counter: неиспользованная локальная переменная
   lab2.vcxproj -> C:\1642\mokhort\test\lab2\Debug\lab2.exe
