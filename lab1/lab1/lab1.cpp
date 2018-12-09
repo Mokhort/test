@@ -18,10 +18,6 @@ int main() {
 	for (int i = 0; i < 3; i++) {
 
 		cin >> q;
-		/*cin >> wstore >> wproduct >> wcost;
-		q.setStore(wstore);
-		q.setProduct(wproduct);
-		q.setCost(wcost);*/
 		p += q;
 		//p.push(q);
 
@@ -29,7 +25,6 @@ int main() {
 	p.sort();
 	cout << p;
 
-	/*any(p);*/
 	int r;
 	bool fl = true;
 	while (fl) {
@@ -46,11 +41,8 @@ int main() {
 			break;
 		case 1:
 			cout << "Write the name of store, product and cost :" << endl;
+			cin >> q;
 
-			cin >> wstore >> wproduct >> wcost;
-			q.setStore(wstore);
-			q.setProduct(wproduct);
-			q.setCost(wcost);
 			p+= q;
 			//p.push(q);
 
@@ -63,7 +55,6 @@ int main() {
 			try
 			{
 				p -= wnumber;
-				//p.pop(wnumber);
 			}
 			catch (int e)
 			{

@@ -6,7 +6,7 @@ using namespace std;
 CommonPrice::CommonPrice()
 {
 	//cout << "\n //Constructor//\n";
-	n = 3;
+	n = 8;
 	tsize = 0;
 	mas = new Price[n];
 }
