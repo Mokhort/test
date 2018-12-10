@@ -1,18 +1,16 @@
-#include <string>
+ï»¿#include <string>
 #include <iostream>
 #include "COMMON.h"
 using namespace std;
 
 CommonPrice::CommonPrice()
 {
-	//cout << "\n //Constructor//\n";
 	n = 8;
 	tsize = 0;
 	mas = new Price[n];
 }
 
 CommonPrice::~CommonPrice() {
-	//cout << "\n //Destructor//\n";
 	delete[]mas;
 }
 
@@ -23,7 +21,7 @@ CommonPrice::CommonPrice(const CommonPrice &obj)
 		mas[i] = obj.mas[i];
 
 	tsize = obj.tsize;
-	//cout << "\n//Copy constructor//\n";
+	
 }
 
 CommonPrice & CommonPrice::operator -=(int wnumber)//void pop(int wnumber) <<
@@ -60,16 +58,8 @@ ostream & operator << (ostream & os, const CommonPrice & com)
 	return os;
 }
 
-//void show() {
-//	if (tsize == 0) {
-//		cout << "spisok is empty" << endl;
-//	}
-//	else {
-//		for (int i = 0; i < tsize; i++)
-//			cout << mas[i].getNumber() << " " << mas[i].getStore() << " " << mas[i].getProduct() << " " << mas[i].getCost() << endl;
-//	}
-//}
-void CommonPrice::sort() {//ñîðòèðîâêà ïóçûðüêîì ïî àëôàâèòó
+
+void CommonPrice::sort() {//ÑÐ¾Ñ€Ñ‚Ð¸Ñ€Ð¾Ð²ÐºÐ° Ð¿ÑƒÐ·Ñ‹Ñ€ÑŒÐºÐ¾Ð¼ Ð¿Ð¾ Ð°Ð»Ñ„Ð°Ð²Ð¸Ñ‚Ñƒ
 	int counter = 1;
 	for (int i = 0; i < tsize; i++)
 		for (int j = tsize - 1; j > i; j--) {

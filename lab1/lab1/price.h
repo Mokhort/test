@@ -1,11 +1,11 @@
-#pragma once
+п»ї#pragma once
 #ifndef PRICE
 #define PRICE
 #include <string>
 #include <iostream>
 using namespace std;
 
-// Товар
+// РўРѕРІР°СЂ
 class Price {
 private:
 	string store;

@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <conio.h>
 #include <string>
 #include "PRICE.h"
@@ -19,8 +19,7 @@ int main() {
 
 		cin >> q;
 		p += q;
-		//p.push(q);
-
+		
 	}
 	p.sort();
 	cout << p;
@@ -46,8 +45,7 @@ int main() {
 			p+= q;
 			//p.push(q);
 
-
-			p.sort();	//+сортировка по алфавиту
+			p.sort();	//+СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ Р°Р»С„Р°РІРёС‚Сѓ
 			break;
 		case 2:
 			cout << "Write the number, which you want to delete :" << endl;
@@ -66,14 +64,14 @@ int main() {
 			}
 			break;
 		case 3:
-			p.sort();//сортировка по алфавиту + show
+			p.sort();//СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ Р°Р»С„Р°РІРёС‚Сѓ + show
 			cout << p;
 			cout << endl;
 			break;
 		case 4:
 			cout << "write a store:" << endl;
 			cin >> storefp;
-			p.prodofstore(storefp);// вывод всех товаров магазина
+			p.prodofstore(storefp);// РІС‹РІРѕРґ РІСЃРµС… С‚РѕРІР°СЂРѕРІ РјР°РіР°Р·РёРЅР°
 			break;
 
 			_getch();

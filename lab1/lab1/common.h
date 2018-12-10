@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #ifndef COMMON
 #define COMMON
 #include "PRICE.h"
@@ -6,7 +6,7 @@
 #include <iostream>
 using namespace std;
 
-// Прайс состоит из товаров
+// РџСЂР°Р№СЃ СЃРѕСЃС‚РѕРёС‚ РёР· С‚РѕРІР°СЂРѕРІ
 class CommonPrice {
 public:
 	int tsize, n, counter = 1;
