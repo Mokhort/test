@@ -20,7 +20,7 @@ int main() {
 	{
 		sentense = sentense + ch;
 
-		if (ch == '.') {
+		if ((ch == '.')||(ch == '!') || (ch == '?')) {
 			txt.push(sentense);
 			sentense = "";
 		}
