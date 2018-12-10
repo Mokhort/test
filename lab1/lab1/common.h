@@ -34,7 +34,7 @@ public:
 		return obj;
 	}
 
-	CommonPrice & operator -=(int wnumber);//void pop(int wnumber) <<
+	CommonPrice & operator -=(int wnumber);
 	
 
 	friend ostream & operator << (ostream & os, const CommonPrice & com);

@@ -43,7 +43,6 @@ int main() {
 			cin >> q;
 
 			p+= q;
-			//p.push(q);
 
 			p.sort();	//+сортировка по алфавиту
 			break;
